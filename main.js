@@ -23,7 +23,7 @@ $(function() {
 	// If the study is called with a parameter for redirection, as explained in the documentation, this value is overwritten. 
 	// To the redirect link, the following information will be appended: (1) participant number, (2) condition, (3) username, (4) description submitted by participant. These variables can be extracted from the link, saved as data, and used for linking the Social Media Ostracism paradigm to subsequent tasks and measures. See documentation for more details.
 
-    settings.defaultredirect = 'http://fppvu.qualtrics.com/SE/?SID=SV_a9u9MdnpIRuxctT';
+    settings.defaultredirect = 'https://www.wjx.cn/vm/rR2CSnp.aspx#';
 
 	
 	// **Tasklength**     
@@ -52,7 +52,7 @@ $(function() {
 	
     // Usernames by which the participant will receive "likes"
 	// If group member names are changed, these should be changed accordingly.
-    settings.likes_by = ['liuyaxuan','zhaoshanshan','wenhaoyue','zhaoying','xutongfei','chenlijuan','sunfeifei','jixing','liling']; 
+    settings.likes_by = ['刘亚轩','赵姗姗','文皓月','赵滢','许桐菲','陈丽娟','孙菲菲','金星','张七月']; 
   }
   
   // -------------------
@@ -89,10 +89,10 @@ $(function() {
   			errormsg = '请输入文字';
   			uname = "undefined";
   		}
-  		if(not_alphanumeric(uname)) {
-  			error = 1;
-  			errormsg = '请用英文字母拼写拼音 (不要有空格)';
-  		}  		
+  		//if(not_alphanumeric(uname)) {
+  		//	error = 1;
+  		//	errormsg = 'Please only letters (and no spaces)';
+  		//}   		
 
   		if(error == 0) {
 			$('#name').hide();
@@ -142,7 +142,7 @@ $(function() {
   	$('#text').show();
 
   	$("#description").keyup(function(){
-  	  $("#count").text("Characters left: " + (400 - $(this).val().length));
+  	  $("#count").text("剩余字数:  " + (400 - $(this).val().length));
   	});
 
   	$('#submit_text').on('click',function() {
@@ -265,7 +265,7 @@ $(function() {
   		{ 
   			times[i] = +times[i]; 
   			
-  			themsg = usernames[i] + "点赞了你的主页";
+  			themsg = usernames[i] + "给你点了个赞！";
 
   			setTimeout(function(themsg) {
   				that.text(parseInt(that.text()) + 1);
